@@ -1,8 +1,8 @@
 import "./SideMenu.css";
 
-const Sidebar = () => {
+const SideMenu = () => {
   return (
-    <div className="side-bar">
+    <div className="side-menu">
       <ul>
         <li>
           <a href="#">Github.</a>
@@ -15,4 +15,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SideMenu;
