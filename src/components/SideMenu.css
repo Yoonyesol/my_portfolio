@@ -1,0 +1,25 @@
+.side-menu {
+  position: fixed;
+  min-width: 300px;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Gowun Dodum", sans-serif;
+}
+
+li > a {
+  cursor: pointer;
+  padding: 20px 40px;
+}
