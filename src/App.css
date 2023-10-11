@@ -4,4 +4,5 @@ body {
   flex-direction: row;
   font-family: "Gowun Dodum", sans-serif;
   align-items: center;
+  justify-content: center;
 }
