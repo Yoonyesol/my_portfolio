@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../components/Card";
 
 import "./Home.css";
 
-const lang_arr = ["JAVASCRIPT", "HTML", "CSS", "REACT.JS"];
+const lang_arr = ["JAVASCRIPT", "HTML", "CSS", "REACT"];
 
 const Home = () => {
   const [lang, setLang] = useState(lang_arr[0]);
@@ -11,20 +11,16 @@ const Home = () => {
   useEffect(() => {
     let lang_num = 0;
     const timer = setInterval(() => {
-      if (lang_num > 3) {
-        lang_num = 0;
-      } else {
-        lang_num++;
-      }
+      lang_num + 1 > 3 ? (lang_num = 0) : lang_num++;
       setLang(lang_arr[lang_num]);
-    }, 900);
+    }, 2000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="home">
       <h2>
-        I interested in <span className={`lang ${lang}`}>{lang}</span>
+        I interested in <p className={`lang ${lang}`}>{lang}</p>
       </h2>
       <Card className="home-card">
         <img src={process.env.PUBLIC_URL + "assets/images/snoopy.jpg"} />

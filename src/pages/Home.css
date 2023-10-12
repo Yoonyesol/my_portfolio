@@ -8,10 +8,24 @@
   padding: 20px;
 }
 
+@keyframes card-animation {
+  from {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .home-card {
   border-radius: 50%;
   padding: 0;
   margin: 0;
+
+  animation: card-animation 2s;
+  animation-iteration-count: 1;
 }
 
 img {
@@ -34,7 +48,43 @@ h3 {
   margin: 0;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .lang {
+  margin: 0;
+  animation: fadein 2s;
+  animation-iteration-count: infinite;
+}
+
+.lang.JAVASCRIPT {
+  background: linear-gradient(#f7d238, #e4a425);
+}
+.lang.HTML {
+  background: linear-gradient(#e99d80, #e65026);
+}
+.lang.CSS {
+  background: linear-gradient(#2eaadb, #0673b0);
+}
+.lang.REACT {
+  background: linear-gradient(#56bad2, rgb(44, 44, 44));
+}
+
+.lang.JAVASCRIPT,
+.lang.HTML,
+.lang.CSS,
+.lang.REACT {
+  color: transparent;
+  -webkit-background-clip: text; /* background 를 어디까지 적용시키는지 */
+
+  animation: fadein 2s;
+  animation-iteration-count: infinite;
 }
 
 .description {
@@ -46,30 +96,30 @@ h3 {
 }
 
 @keyframes moving-arrow {
-  0% {
+  from {
     margin-top: 0px;
   }
-  100% {
+  to {
     margin-top: 15px;
   }
 }
 
 .detail-btn-wrapper {
-  margin: 30px;
-
-  animation-name: moving-arrow;
-  animation-duration: 0.8s;
-  animation-duration: leaner;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
 }
 
 .detail-btn {
   padding: 5px 18px 10px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 
   font-size: 30px;
 
   border-radius: 50%;
   border: none;
+
+  cursor: pointer;
+
+  animation-name: moving-arrow;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
