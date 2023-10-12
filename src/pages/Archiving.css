@@ -1,5 +1,6 @@
 .archiving {
-  background-color: #615859;
+  /* background-color: #615859; */
+  background: linear-gradient(#615859, #e4cd6d);
   padding: 40px;
 
   display: flex;
@@ -16,14 +17,14 @@
 .card-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .github-card,
 .blog-card {
   width: 50%;
   padding: 25px;
-  margin: 10px;
+  margin: 10px 30px;
 }
 
 .github-card {
