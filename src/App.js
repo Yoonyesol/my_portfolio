@@ -3,6 +3,7 @@ import Archiving from "./pages/Archiving";
 import Skills from "./pages/Skills";
 
 import "./App.css";
+import Project from "./pages/Project";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Home />
       <Archiving />
       <Skills />
+      <Project />
     </div>
   );
 }
