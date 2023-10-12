@@ -19,21 +19,26 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h2>
+      <h1>
         I interested in <p className={`lang ${lang}`}>{lang}</p>
-      </h2>
+      </h1>
       <Card className="home-card">
         <img src={process.env.PUBLIC_URL + "assets/images/snoopy.jpg"} />
       </Card>
       <div className="intro">
-        <h3>윤예솔</h3>
+        <h2>윤예솔</h2>
         <div className="description">
           <p>상상을 실제 코드로 구현하는 과정을 즐깁니다.</p>
           <p>지식의 습득과 성장에 열정을 가지고 있습니다.</p>
         </div>
       </div>
       <div className="detail-btn-wrapper">
-        <button className="detail-btn">↓</button>
+        <button
+          className="detail-btn"
+          onClick={() => (window.location.href = "#Archiving")}
+        >
+          ↓
+        </button>
       </div>
     </div>
   );

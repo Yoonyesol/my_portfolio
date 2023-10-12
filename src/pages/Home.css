@@ -5,7 +5,16 @@
   align-items: center;
   text-align: center;
 
-  padding: 20px;
+  padding: 40px;
+}
+
+.home > h1 {
+  margin: 30px 0px;
+}
+
+.intro > h2 {
+  font-family: "Gowun Dodum", sans-serif;
+  margin: 0;
 }
 
 @keyframes card-animation {
@@ -33,19 +42,8 @@ img {
   height: 400px;
 }
 
-h2 {
-  font-family: "Dela Gothic One", sans-serif;
-  font-size: 40px;
-}
-
 .intro {
   margin: 30px;
-}
-
-h3 {
-  font-size: 35px;
-  font-weight: bold;
-  margin: 0;
 }
 
 @keyframes fadein {
@@ -105,6 +103,8 @@ h3 {
 }
 
 .detail-btn-wrapper {
+  height: 50px;
+  margin-bottom: 50px;
 }
 
 .detail-btn {
