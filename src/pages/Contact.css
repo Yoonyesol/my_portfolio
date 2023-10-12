@@ -1,0 +1,59 @@
+.contact {
+  background-color: #9bbab2;
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-card-wrapper {
+}
+
+.email-link {
+  color: rgb(85, 85, 87);
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.contact-card {
+  padding: 40px;
+}
+
+.contents > input {
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+.contents > textarea {
+  height: 100px;
+}
+
+.contents > input,
+.contents > textarea {
+  width: 500px;
+
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.send-btn {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.send-btn > button {
+  background-color: #b3d2a8;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+}

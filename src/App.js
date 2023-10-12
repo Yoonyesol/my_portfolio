@@ -4,6 +4,8 @@ import Skills from "./pages/Skills";
 
 import "./App.css";
 import Project from "./pages/Project";
+import Edu from "./pages/Edu";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Archiving />
       <Skills />
       <Project />
+      <Edu />
+      <Contact />
     </div>
   );
 }

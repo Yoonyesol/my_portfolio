@@ -1,7 +1,8 @@
 .skills {
   margin: 0;
   /* background-color: #e4cd6d; */
-  background: linear-gradient(#e4cd6d, #ebe996);
+
+  background: linear-gradient(#ebe996, #ebf9ac);
   padding: 40px;
 
   display: flex;

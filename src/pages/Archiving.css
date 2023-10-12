@@ -1,6 +1,6 @@
 .archiving {
   /* background-color: #615859; */
-  background: linear-gradient(#615859, #e4cd6d);
+  background: linear-gradient(#e4cd6d, #ebe996);
   padding: 40px;
 
   display: flex;
@@ -10,7 +10,6 @@
 }
 
 .archiving-title {
-  color: white;
   margin: 0 0 40px 0;
 }
 
