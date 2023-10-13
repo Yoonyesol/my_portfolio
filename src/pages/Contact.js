@@ -1,10 +1,10 @@
-import { useRef } from "react";
+import { forwardRef, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Card from "../components/Card";
 
 import "./Contact.css";
 
-const Contact = () => {
+const Contact = forwardRef((props, ref) => {
   const form = useRef();
 
   const sendEmailHandler = (e) => {
@@ -34,10 +34,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
-      <h1 className="contact-title">
-        <a name="Contact">Contact</a>
-      </h1>
+    <div className="contact" ref={ref}>
+      <h1 className="contact-title">Contact</h1>
       <p>
         <a href="mailto:seaofiandme35@gmail.com" className="email-link">
           📧 seaofiandme35@gmail.com
@@ -60,6 +58,6 @@ const Contact = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Contact;

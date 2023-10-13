@@ -1,12 +1,12 @@
+import { forwardRef } from "react";
 import Card from "../components/Card";
+
 import "./Archiving.css";
 
-const Archiving = () => {
+const Archiving = forwardRef((props, ref) => {
   return (
-    <div className="archiving">
-      <h1 className="archiving-title">
-        <a name="Archiving">Archiving</a>
-      </h1>
+    <div className="archiving" ref={ref}>
+      <h1 className="archiving-title">Archiving</h1>
       <div className="card-wrapper">
         <Card className="github-card">
           <h2 className="github-title">GitHub</h2>
@@ -21,6 +21,6 @@ const Archiving = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Archiving;

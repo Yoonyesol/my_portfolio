@@ -1,27 +1,34 @@
 import "./MenuBar.css";
 
-const MenuBar = () => {
+const MenuBar = ({
+  moveToHome,
+  moveToArc,
+  moveToSkill,
+  moveToPrj,
+  moveToEdu,
+  moveToContact,
+}) => {
   return (
     <header className="menu-bar">
       <div className="menu-contents">
-        <div className="menu-title">
-          <a href="#Home">Portfolio</a>
+        <div className="menu-title" onClick={moveToHome}>
+          Portfolio
         </div>
         <div className="menu-list">
           <div className="menu-item">
-            <a href="#Archiving">Archiving</a>
+            <div onClick={moveToArc}>Archiving</div>
           </div>
           <div className="menu-item">
-            <a href="#Skills">Tech Skills</a>
+            <div onClick={moveToSkill}>Tech Skills</div>
           </div>
           <div className="menu-item">
-            <a href="#Project">Project</a>
+            <div onClick={moveToPrj}>Project</div>
           </div>
           <div className="menu-item">
-            <a href="#Edu">Edu & Cert</a>
+            <div onClick={moveToEdu}>Edu & Cert</div>
           </div>
           <div className="menu-item">
-            <a href="#Contact">Contact</a>
+            <div onClick={moveToContact}>Contact</div>
           </div>
         </div>
       </div>

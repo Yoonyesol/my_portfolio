@@ -16,11 +16,9 @@
   justify-content: space-around;
 }
 
-.menu-title > a {
-  color: black;
+.menu-title {
   font-size: 25px;
   cursor: pointer;
-  text-decoration: none;
 
   font-family: "Dela Gothic One", sans-serif;
 }
@@ -35,7 +33,7 @@
   margin: 0 35px;
 }
 
-.menu-item > a {
+.menu-item > div {
   color: black;
   font-size: 20px;
   cursor: pointer;

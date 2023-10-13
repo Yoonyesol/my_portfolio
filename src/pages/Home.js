@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { forwardRef, useEffect, useState } from "react";
 import Card from "../components/Card";
 
 import "./Home.css";
 
 const lang_arr = ["JAVASCRIPT", "HTML", "CSS", "REACT"];
 
-const Home = () => {
+const Home = forwardRef((props, ref) => {
   const [lang, setLang] = useState(lang_arr[0]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home" id="Home">
+    <div className="home" ref={ref}>
       <h1>
         I interested in <p className={`lang ${lang}`}>{lang}</p>
       </h1>
@@ -33,15 +33,12 @@ const Home = () => {
         </div>
       </div>
       <div className="detail-btn-wrapper">
-        <button
-          className="detail-btn"
-          onClick={() => (window.location.href = "#Archiving")}
-        >
+        <button className="detail-btn" onClick={props.moveToArc}>
           ↓
         </button>
       </div>
     </div>
   );
-};
+});
 
 export default Home;

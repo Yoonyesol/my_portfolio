@@ -1,12 +1,11 @@
+import { forwardRef } from "react";
 import Card from "../components/Card";
 import "./Edu.css";
 
-const Edu = () => {
+const Edu = forwardRef((props, ref) => {
   return (
-    <div className="edu">
-      <h1 className="edu-title">
-        <a name="Edu">Edu & Certification</a>
-      </h1>
+    <div className="edu" ref={ref}>
+      <h1 className="edu-title">Edu & Certification</h1>
       <div className="edu-card-wrapper">
         <Card className="edu-card">
           <h2 className="edu-title">Edu</h2>
@@ -26,6 +25,6 @@ const Edu = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Edu;
