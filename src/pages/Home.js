@@ -18,7 +18,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home">
+    <div className="home" id="Home">
       <h1>
         I interested in <p className={`lang ${lang}`}>{lang}</p>
       </h1>

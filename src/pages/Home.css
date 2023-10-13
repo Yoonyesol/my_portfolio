@@ -5,6 +5,7 @@
   align-items: center;
   text-align: center;
 
+  margin-top: 70px;
   padding: 40px;
 }
 
@@ -39,7 +40,7 @@
 
 img {
   overflow: hidden;
-  height: 400px;
+  height: 300px;
 }
 
 .intro {
@@ -86,7 +87,7 @@ img {
 }
 
 .description {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .description > p {
