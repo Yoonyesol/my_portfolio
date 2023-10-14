@@ -1,6 +1,5 @@
 .project {
   margin: 0;
-  /* background-color: #e4cd6d; */
   background: linear-gradient(#ebf9ac, #b3d2a8);
   padding: 40px;
 
@@ -17,6 +16,7 @@
 
 .project-card {
   padding: 40px;
+  margin-bottom: 40px;
 }
 
 .project-card > h2,
@@ -27,11 +27,16 @@
 section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 article {
   margin: 0px 15px;
+}
+
+article > img {
+  width: 350px;
+  height: auto;
 }
 
 .link-wrapper {
