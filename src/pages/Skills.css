@@ -1,7 +1,4 @@
 .skills {
-  margin: 0;
-  /* background-color: #e4cd6d; */
-
   background: linear-gradient(#ebe996, #ebf9ac);
   padding: 40px;
 
@@ -11,7 +8,7 @@
   align-items: center;
 }
 
-.skills-title {
+.skills-main-title {
   margin: 0 0 40px 0;
 }
 
@@ -21,30 +18,18 @@
   justify-content: space-between;
 }
 
-.frontend-card,
-.backend-card,
-.etc-card {
-  width: 300px;
-  padding: 25px;
-  margin: 10px 30px;
+.skill-img-wrapper > img {
+  width: 250px;
+  height: auto;
 }
 
-.frontend-title,
-.backend-title,
-.etc-title {
-  margin: 0 0 20px 0;
+.skill-card {
+  width: 250px;
+  padding: 20px 40px;
+  margin: 30px;
 }
 
-.skill-div {
-  text-align: center;
-}
-
-.skill-div > img {
-  height: 50%;
-}
-
-.skill-div > p {
-  height: 50%;
-  font-weight: bold;
-  margin: 0 0px 20px 0px;
+.skill-title {
+  margin: 0 0 30px 0;
+  color: rgb(83, 83, 88);
 }
