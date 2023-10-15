@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding-top: 50px;
   font-family: "Gowun Dodum", sans-serif;
   align-items: center;
 }
@@ -7,12 +8,41 @@ body {
 .App {
 }
 
+/* 전역 스타일링 */
+
 h1 {
+  margin: 0;
   font-family: "Black Han Sans", sans-serif;
-  font-size: 40px;
+  font-size: 45px;
 }
 
 h2 {
+  margin: 0 0 30px 0;
   font-family: "Black Han Sans", sans-serif;
   font-size: 30px;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+  color: rgba(137, 137, 143, 0.712);
+}
+
+.container {
+  padding: 50px 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0px;
 }

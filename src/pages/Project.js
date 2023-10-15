@@ -4,8 +4,8 @@ import "./Project.css";
 
 const Project = forwardRef((props, ref) => {
   return (
-    <div className="project" ref={ref}>
-      <h1 className="project-title">Project</h1>
+    <div className="container project" ref={ref}>
+      <h1 className="main-title">Project</h1>
       <div className="project-card-wrapper">
         <Card className="project-card">
           <h2 className="project-title">🌓Dream note</h2>

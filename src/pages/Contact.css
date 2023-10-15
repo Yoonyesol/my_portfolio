@@ -1,25 +1,9 @@
 .contact {
   background-color: #9bbab2;
-  padding: 40px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-card-wrapper {
-}
-
-.email-link {
-  color: rgb(85, 85, 87);
-  font-weight: bold;
-  font-size: 16px;
-  text-decoration: none;
 }
 
 .contact-card {
-  padding: 40px;
+  text-align: left;
 }
 
 .contents > input {
@@ -34,6 +18,7 @@
 .contents > input,
 .contents > textarea {
   width: 500px;
+  margin-bottom: 20px;
 
   cursor: pointer;
   font-size: 16px;

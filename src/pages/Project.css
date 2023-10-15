@@ -1,25 +1,21 @@
 .project {
-  margin: 0;
   background: linear-gradient(#ebf9ac, #b3d2a8);
-  padding: 40px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .project-card-wrapper {
   width: 900px;
-  padding: 40px;
+  padding: 0px 40px 40px 40px;
 }
 
 .project-card {
-  padding: 40px;
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
-.project-card > h2,
+.project-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
 .project-card > h4 {
   text-align: center;
 }
@@ -28,10 +24,12 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 40px;
 }
 
 article {
   margin: 0px 15px;
+  text-align: left;
 }
 
 article > img {

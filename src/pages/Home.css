@@ -5,16 +5,11 @@
   align-items: center;
   text-align: center;
 
-  padding: 110px 40px 40px 40px;
+  padding: 40px;
 }
 
 .home > h1 {
-  margin: 30px 0px;
-}
-
-.intro > h2 {
-  font-family: "Gowun Dodum", sans-serif;
-  margin: 0;
+  margin: 50px 30px 30px 30px;
 }
 
 @keyframes card-animation {
@@ -37,13 +32,18 @@
   animation-iteration-count: 1;
 }
 
-img {
+.home-card > img {
   overflow: hidden;
   height: 300px;
 }
 
 .intro {
   margin: 30px;
+}
+
+.intro > h2 {
+  font-family: "Gowun Dodum", sans-serif;
+  margin: 0;
 }
 
 @keyframes fadein {
@@ -56,7 +56,7 @@ img {
 }
 
 .lang {
-  margin: 0;
+  margin: 10px 0 0 0;
   animation: fadein 2s;
   animation-iteration-count: infinite;
 }
@@ -85,7 +85,17 @@ img {
   animation-iteration-count: infinite;
 }
 
+.email-link {
+  margin-top: 10px;
+}
+
+.email-link > a {
+  color: rgb(85, 85, 87);
+  text-decoration: none;
+}
+
 .description {
+  margin-top: 30px;
   font-size: 20px;
 }
 

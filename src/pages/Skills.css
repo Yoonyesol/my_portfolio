@@ -1,21 +1,5 @@
 .skills {
   background: linear-gradient(#ebe996, #ebf9ac);
-  padding: 40px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.skills-main-title {
-  margin: 0 0 40px 0;
-}
-
-.skill-card-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .skill-img-wrapper > img {
@@ -25,8 +9,6 @@
 
 .skill-card {
   width: 250px;
-  padding: 20px 40px;
-  margin: 30px;
 }
 
 .skill-title {

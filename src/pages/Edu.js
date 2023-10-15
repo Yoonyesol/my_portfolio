@@ -4,13 +4,13 @@ import "./Edu.css";
 
 const Edu = forwardRef((props, ref) => {
   return (
-    <div className="edu" ref={ref}>
-      <h1 className="edu-title">Edu & Certification</h1>
-      <div className="edu-card-wrapper">
+    <div className="container edu" ref={ref}>
+      <h1 className="main-title">Edu & Cert</h1>
+      <div className="card-wrapper">
         <Card className="edu-card">
-          <h2 className="edu-title">Edu</h2>
+          <h2 className="edu-title">Education</h2>
           <img src={process.env.PUBLIC_URL + "assets/images/inha.svg"} />
-          <h3>인하대학교 컴퓨터공학과 학사</h3>
+          <h3>인하대학교 컴퓨터공학 학사</h3>
           <h4> (2017.02 ~ 2023.08)</h4>
         </Card>
         <Card className="edu-card">

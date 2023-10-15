@@ -34,14 +34,9 @@ const Contact = forwardRef((props, ref) => {
   };
 
   return (
-    <div className="contact" ref={ref}>
-      <h1 className="contact-title">Contact</h1>
-      <p>
-        <a href="mailto:seaofiandme35@gmail.com" className="email-link">
-          📧 seaofiandme35@gmail.com
-        </a>
-      </p>
-      <div className="contact-card-wrapper">
+    <div className="container contact" ref={ref}>
+      <h1 className="main-title">Contact</h1>
+      <div className="card-wrapper">
         <Card className="contact-card">
           <form className="contents" ref={form} onSubmit={sendEmailHandler}>
             <h3>Name</h3>
