@@ -1,15 +1,38 @@
 .home {
   display: flex;
   flex-direction: column;
+  padding: 110px 0 40px 0;
 
   align-items: center;
   text-align: center;
-
-  padding: 40px;
 }
 
 .home > h1 {
-  margin: 50px 30px 30px 30px;
+  margin-top: 80px;
+}
+
+.title {
+  margin: 110px 0 40px 0;
+}
+
+.title > h1 {
+  font-size: calc(40px + 5vw);
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 0.15em #1da9cc;
+
+  filter: blur(0.007em);
+
+  animation: fadein 4s;
+  animation-iteration-count: 1;
+}
+
+.title > h2 {
+  font-size: 20px;
+  color: #f7d238;
+  letter-spacing: 15px;
+
+  animation: fadein 6s;
+  animation-iteration-count: 1;
 }
 
 @keyframes card-animation {
@@ -90,7 +113,7 @@
 }
 
 .email-link > a {
-  color: rgb(85, 85, 87);
+  color: rgb(127, 127, 129);
   text-decoration: none;
 }
 
@@ -101,6 +124,10 @@
 
 .description > p {
   margin-bottom: 0;
+
+  animation: fadein 7s;
+  animation-iteration-count: 1;
+  color: rgba(229, 229, 240, 0.808);
 }
 
 @keyframes moving-arrow {
@@ -108,25 +135,20 @@
     margin-top: 0px;
   }
   to {
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 
-.detail-btn-wrapper {
+.scroll {
   height: 50px;
-  margin-bottom: 50px;
+  margin: 50px;
 }
 
-.detail-btn {
-  padding: 5px 18px 10px 18px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-
-  font-size: 30px;
-
-  border-radius: 50%;
-  border: none;
-
+.scroll > img {
   cursor: pointer;
+
+  width: 20px;
+  height: auto;
 
   animation-name: moving-arrow;
   animation-duration: 0.8s;

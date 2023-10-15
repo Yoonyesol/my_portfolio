@@ -6,7 +6,7 @@ import "./App.css";
 import Project from "./pages/Project";
 import Edu from "./pages/Edu";
 import Contact from "./pages/Contact";
-import MenuBar from "./components/MenuBar";
+import Header from "./components/Header";
 import { useRef } from "react";
 import TopButton from "./components/TopButton";
 
@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <TopButton moveToHome={moveToHomeHandler} />
-      <MenuBar
+      <Header
         moveToHome={moveToHomeHandler}
         moveToArc={moveToArcHandler}
         moveToSkill={moveToSkillsHandler}

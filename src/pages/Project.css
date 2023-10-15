@@ -1,5 +1,5 @@
 .project {
-  background: linear-gradient(#ebf9ac, #b3d2a8);
+  /* background: linear-gradient(#ebf9ac, #b3d2a8); */
 }
 
 .project-card-wrapper {
@@ -38,7 +38,7 @@ article > img {
 }
 
 .link-wrapper {
-  background-color: #ebe996;
+  background-color: #f2dd68;
   padding: 0 10px;
   width: auto;
   border-radius: 10px;

@@ -1,6 +1,6 @@
-import "./MenuBar.css";
+import "./Header.css";
 
-const MenuBar = ({
+const Header = ({
   moveToHome,
   moveToArc,
   moveToSkill,
@@ -9,9 +9,9 @@ const MenuBar = ({
   moveToContact,
 }) => {
   return (
-    <header className="menu-bar">
-      <div className="menu-contents">
-        <div className="menu-title" onClick={moveToHome}>
+    <header className="header">
+      <div className="header-contents">
+        <div className="header-title" onClick={moveToHome}>
           Portfolio
         </div>
         <div className="menu-list">
@@ -36,4 +36,4 @@ const MenuBar = ({
   );
 };
 
-export default MenuBar;
+export default Header;

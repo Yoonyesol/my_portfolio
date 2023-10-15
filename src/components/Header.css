@@ -1,41 +1,44 @@
-.menu-bar {
+.header {
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  background-color: beige;
+  background-color: #020715d0;
   z-index: 1;
 }
 
-.menu-contents {
+.header-contents {
   width: 100%;
   display: flex;
-  padding: 20px 30px;
+  padding: 20px 0;
   margin: 0 auto;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
-.menu-title {
+.header-title {
   font-size: 25px;
   cursor: pointer;
+  padding: 0 40px;
 
-  font-family: "Black Han Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .menu-list {
   display: flex;
   flex-direction: row;
+  padding: 0 40px;
   justify-content: space-around;
 }
 
 .menu-item {
-  margin: 0 35px;
+  margin: 0 20px;
 }
 
 .menu-item > div {
-  color: black;
-  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 18px;
   cursor: pointer;
   text-decoration: none;
 }
