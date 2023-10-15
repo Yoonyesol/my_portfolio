@@ -16,7 +16,7 @@
 }
 
 .title > h1 {
-  font-size: calc(40px + 5vw);
+  font-size: calc(25px + 5vw);
   letter-spacing: 0.02em;
   text-shadow: 0 0 0.15em #1da9cc;
 
