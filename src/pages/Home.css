@@ -12,7 +12,7 @@
 }
 
 .title {
-  margin: 110px 0 40px 0;
+  margin: 90px 0 40px 0;
 }
 
 .title > h1 {
@@ -44,77 +44,6 @@
     transform: scale(1);
     opacity: 1;
   }
-}
-
-.home-card {
-  border-radius: 50%;
-  padding: 0;
-  margin: 0;
-
-  animation: card-animation 2s;
-  animation-iteration-count: 1;
-}
-
-.home-card > img {
-  overflow: hidden;
-  height: 300px;
-}
-
-.intro {
-  margin: 30px;
-}
-
-.intro > h2 {
-  font-family: "Gowun Dodum", sans-serif;
-  margin: 0;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.lang {
-  margin: 10px 0 0 0;
-  animation: fadein 2s;
-  animation-iteration-count: infinite;
-}
-
-.lang.JAVASCRIPT {
-  background: linear-gradient(#f7d238, #e4a425);
-}
-.lang.HTML {
-  background: linear-gradient(#e99d80, #e65026);
-}
-.lang.CSS {
-  background: linear-gradient(#2eaadb, #0673b0);
-}
-.lang.REACT {
-  background: linear-gradient(#56bad2, rgb(44, 44, 44));
-}
-
-.lang.JAVASCRIPT,
-.lang.HTML,
-.lang.CSS,
-.lang.REACT {
-  color: transparent;
-  -webkit-background-clip: text; /* background 를 어디까지 적용시키는지 */
-
-  animation: fadein 2s;
-  animation-iteration-count: infinite;
-}
-
-.email-link {
-  margin-top: 10px;
-}
-
-.email-link > a {
-  color: rgb(127, 127, 129);
-  text-decoration: none;
 }
 
 .description {
