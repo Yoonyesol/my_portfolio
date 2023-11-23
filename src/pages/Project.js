@@ -118,6 +118,10 @@ const Project = forwardRef((props, ref) => {
               <a href="https://github.com/Yoonyesol/my_portfolio">
                 my_portfolio
               </a>
+              <p className="link-wrapper">배포 링크</p>
+              <a href="https://yoonyesol.github.io/my_portfolio/">
+                https://yoonyesol.github.io/my_portfolio/
+              </a>
               <p className="link-wrapper">개발 기록</p>
               <a href="https://tinyurl.com/yu9yg6hc">florescene.tistory.com</a>
             </article>
