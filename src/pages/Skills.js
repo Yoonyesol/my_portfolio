@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import Card from "../components/Card";
 import "./Skills.css";
+import { imageUrl } from "../utils/commonUtil";
 
 const Skills = forwardRef((props, ref) => {
   return (
@@ -11,12 +12,10 @@ const Skills = forwardRef((props, ref) => {
           <Card className="skill-card">
             <h2 className="skill-title">Frontend</h2>
             <div className="skill-img-wrapper">
+              <img src={imageUrl + "assets/images/htmlcssjs.png"} />
+              <img src={imageUrl + "assets/images/react.png"} />
               <img
-                src={process.env.PUBLIC_URL + "assets/images/htmlcssjs.png"}
-              />
-              <img src={process.env.PUBLIC_URL + "assets/images/react.png"} />
-              <img
-                src={process.env.PUBLIC_URL + "assets/images/styled.png"}
+                src={imageUrl + "assets/images/styled.png"}
                 style={{ width: "120px" }}
               />
             </div>
@@ -24,8 +23,8 @@ const Skills = forwardRef((props, ref) => {
           <Card className="skill-card">
             <h2 className="skill-title">Backend</h2>
             <div className="skill-img-wrapper">
-              <img src={process.env.PUBLIC_URL + "assets/images/node.png"} />
-              <img src={process.env.PUBLIC_URL + "assets/images/mysql.png"} />
+              <img src={imageUrl + "assets/images/node.png"} />
+              <img src={imageUrl + "assets/images/mysql.png"} />
             </div>
           </Card>
         </div>
@@ -33,19 +32,17 @@ const Skills = forwardRef((props, ref) => {
           <Card className="skill-card">
             <h2 className="skill-title">Deployment</h2>
             <div className="skill-img-wrapper">
-              <img
-                src={process.env.PUBLIC_URL + "assets/images/firebase.png"}
-              />
-              <img src={process.env.PUBLIC_URL + "assets/images/netlify.png"} />
-              <img src={process.env.PUBLIC_URL + "assets/images/heroku.png"} />
+              <img src={imageUrl + "assets/images/firebase.png"} />
+              <img src={imageUrl + "assets/images/netlify.png"} />
+              <img src={imageUrl + "assets/images/heroku.png"} />
             </div>
           </Card>
           <Card className="skill-card">
             <h2 className="skill-title">Etc</h2>
             <div className="skill-img-wrapper">
-              <img src={process.env.PUBLIC_URL + "assets/images/git.png"} />
-              <img src={process.env.PUBLIC_URL + "assets/images/github.png"} />
-              <img src={process.env.PUBLIC_URL + "assets/images/python.png"} />
+              <img src={imageUrl + "assets/images/git.png"} />
+              <img src={imageUrl + "assets/images/github.png"} />
+              <img src={imageUrl + "assets/images/python.png"} />
             </div>
           </Card>
         </div>

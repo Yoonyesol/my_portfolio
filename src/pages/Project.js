@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import Card from "../components/Card";
 import "./Project.css";
+import { imageUrl } from "../utils/commonUtil";
 
 const Project = forwardRef((props, ref) => {
   return (
@@ -12,7 +13,7 @@ const Project = forwardRef((props, ref) => {
           <h4>개인 프로젝트</h4>
           <section>
             <article>
-              <img src={process.env.PUBLIC_URL + "assets/images/dn1.png"} />
+              <img src={imageUrl + "assets/images/dn1.png"} />
               <p className="link-wrapper">Github</p>
               <a href="https://github.com/Yoonyesol/Dream_note">Dream_note</a>
               <p className="link-wrapper">배포 링크</p>
@@ -61,9 +62,7 @@ const Project = forwardRef((props, ref) => {
           <h4>개인 프로젝트</h4>
           <section>
             <article>
-              <img
-                src={process.env.PUBLIC_URL + "assets/images/stopwatch1.png"}
-              />
+              <img src={imageUrl + "assets/images/stopwatch1.png"} />
               <p className="link-wrapper">Github</p>
               <a href="https://github.com/Yoonyesol/Clock-Web">Clock-Web</a>
               <p className="link-wrapper">배포 링크</p>
@@ -111,9 +110,7 @@ const Project = forwardRef((props, ref) => {
           <h4>개인 프로젝트</h4>
           <section>
             <article>
-              <img
-                src={process.env.PUBLIC_URL + "assets/images/portfolio1.png"}
-              />
+              <img src={imageUrl + "assets/images/portfolio1.png"} />
               <p className="link-wrapper">Github</p>
               <a href="https://github.com/Yoonyesol/my_portfolio">
                 my_portfolio
@@ -145,7 +142,7 @@ const Project = forwardRef((props, ref) => {
           <h4>개인 프로젝트 (진행중)</h4>
           <section>
             <article>
-              <img src={process.env.PUBLIC_URL + "assets/images/social1.png"} />
+              <img src={imageUrl + "assets/images/social1.png"} />
               <p className="link-wrapper">Github</p>
               <a href="https://github.com/Yoonyesol/Web-Social-Account-Book">
                 Web-Social-Account-Book
