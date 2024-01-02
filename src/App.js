@@ -8,7 +8,6 @@ import Edu from "./pages/Edu";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import { useRef } from "react";
-import TopButton from "./components/TopButton";
 
 function App() {
   const HomeRef = useRef(null);
@@ -39,7 +38,6 @@ function App() {
 
   return (
     <div className="App">
-      <TopButton moveToHome={moveToHomeHandler} />
       <Header
         moveToHome={moveToHomeHandler}
         moveToArc={moveToArcHandler}
