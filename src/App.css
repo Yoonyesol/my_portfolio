@@ -9,10 +9,21 @@ body {
 .App {
 }
 
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* 전역 스타일링 */
 
 h1 {
-  margin: 0;
+  margin: 20px;
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
 }

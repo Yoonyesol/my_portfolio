@@ -7,7 +7,7 @@ import Project from "./pages/Project";
 import Edu from "./pages/Edu";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
   const HomeRef = useRef(null);
@@ -16,6 +16,7 @@ function App() {
   const ProjectRef = useRef(null);
   const EduRef = useRef(null);
   const ContactRef = useRef(null);
+  const [visibleSections, setVisibleSections] = useState([]);
 
   const moveToHomeHandler = () => {
     HomeRef.current.scrollIntoView({ behavior: "smooth" });
@@ -36,6 +37,39 @@ function App() {
     ContactRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition =
+        window.scrollY || document.documentElement.scrollTop;
+
+      const sections = [
+        { ref: ArchivingRef, id: "archiving" },
+        { ref: SkillsRef, id: "skills" },
+        { ref: ProjectRef, id: "project" },
+        { ref: EduRef, id: "edu" },
+        { ref: ContactRef, id: "contact" },
+      ];
+
+      const visibleSections = sections
+        .filter(({ ref }) => {
+          const rect = ref.current.getBoundingClientRect();
+          return (
+            rect.top <= window.innerHeight / 2 &&
+            rect.bottom >= window.innerHeight / 2
+          );
+        })
+        .map(({ id }) => id);
+
+      setVisibleSections(visibleSections);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="App">
       <Header
@@ -47,11 +81,42 @@ function App() {
         moveToContact={moveToContactHandler}
       />
       <Home ref={HomeRef} moveToArc={moveToArcHandler} />
-      <Archiving ref={ArchivingRef} />
-      <Skills ref={SkillsRef} />
-      <Project ref={ProjectRef} />
-      <Edu ref={EduRef} />
-      <Contact ref={ContactRef} />
+      <div
+        ref={ArchivingRef}
+        className={`section ${
+          visibleSections.includes("archiving") && "visible"
+        }`}
+      >
+        <Archiving />
+      </div>
+      <div
+        ref={SkillsRef}
+        className={`section ${visibleSections.includes("skills") && "visible"}`}
+      >
+        <Skills />
+      </div>
+      <div
+        ref={ProjectRef}
+        className={`section ${
+          visibleSections.includes("project") && "visible"
+        }`}
+      >
+        <Project />
+      </div>
+      <div
+        ref={EduRef}
+        className={`section ${visibleSections.includes("edu") && "visible"}`}
+      >
+        <Edu />
+      </div>
+      <div
+        ref={ContactRef}
+        className={`section ${
+          visibleSections.includes("contact") && "visible"
+        }`}
+      >
+        <Contact />
+      </div>
     </div>
   );
 }
