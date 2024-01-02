@@ -14,14 +14,20 @@ const Edu = forwardRef((props, ref) => {
           <h3>인하대학교 컴퓨터공학 학사</h3>
           <h4> (2017.02 ~ 2023.08)</h4>
         </Card>
-        <Card className="edu-card">
-          <h2 className="edu-title">Certification</h2>
-          <img src={imageUrl + "assets/images/q-net.png"} />
-          <h3>정보처리기사</h3>
-          <h4>(한국산업인력공단. 2023.06.09)</h4>
-          <img src={imageUrl + "assets/images/opic.webp"} />
-          <h3>OPic IM2</h3>
-          <h4>(ACTFL. 2023.06.07)</h4>
+        <Card className="cert-card">
+          <h2 className="cert-title">Certification</h2>
+          <div className="cert-items-container">
+            <div className="cert-item">
+              <img src={imageUrl + "assets/images/q-net.png"} />
+              <h3>정보처리기사</h3>
+              <h4>(한국산업인력공단. 2023.06.09)</h4>
+            </div>
+            <div className="cert-item">
+              <img src={imageUrl + "assets/images/opic.webp"} />
+              <h3>OPic IM2</h3>
+              <h4>(ACTFL. 2023.06.07)</h4>
+            </div>
+          </div>
         </Card>
       </div>
     </div>
