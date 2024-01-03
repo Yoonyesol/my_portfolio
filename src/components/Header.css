@@ -3,8 +3,9 @@
   top: 0;
   right: 0;
   left: 0;
-  background-color: #161616b9;
+  background-color: #1616168c;
   z-index: 1;
+  backdrop-filter: blur(10px);
 }
 
 .header-contents {
