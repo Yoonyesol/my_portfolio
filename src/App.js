@@ -17,6 +17,7 @@ function App() {
   const EduRef = useRef(null);
   const ContactRef = useRef(null);
   const [visibleSections, setVisibleSections] = useState([]);
+  const [selectedPage, setSelectedPage] = useState("");
 
   const moveToHomeHandler = () => {
     HomeRef.current.scrollIntoView({ behavior: "smooth" });
@@ -43,6 +44,7 @@ function App() {
         window.scrollY || document.documentElement.scrollTop;
 
       const sections = [
+        { ref: HomeRef, id: "home" },
         { ref: ArchivingRef, id: "archiving" },
         { ref: SkillsRef, id: "skills" },
         { ref: ProjectRef, id: "project" },
@@ -61,6 +63,10 @@ function App() {
         .map(({ id }) => id);
 
       setVisibleSections(visibleSections);
+
+      if (visibleSections.length > 0) {
+        setSelectedPage(visibleSections[0]);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -79,6 +85,7 @@ function App() {
         moveToPrj={moveToProjectHandler}
         moveToEdu={moveToEduHandler}
         moveToContact={moveToContactHandler}
+        selectedPage={selectedPage}
       />
       <Home ref={HomeRef} moveToArc={moveToArcHandler} />
       <div

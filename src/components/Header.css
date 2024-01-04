@@ -33,12 +33,18 @@
 }
 
 .menu-item {
-  margin: 0 20px;
+  padding: 0 5px;
+  margin: 0 10px;
+}
+
+.menu-item.visible {
+  font-weight: 600;
+  background-color: #f2dd68;
+  color: #161616;
 }
 
 .menu-item > div {
   font-family: "Poppins", sans-serif;
-  color: white;
   font-size: 18px;
   cursor: pointer;
   text-decoration: none;

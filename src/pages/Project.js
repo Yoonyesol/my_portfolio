@@ -1,7 +1,7 @@
 import { forwardRef, useState } from "react";
 import Card from "../components/Card";
 import "./Project.css";
-import { projectItems } from "./ProjectItems";
+import { projectItems } from "../components/ProjectItems";
 
 const Project = forwardRef((props, ref) => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
@@ -21,7 +21,6 @@ const Project = forwardRef((props, ref) => {
   return (
     <div className="container project" ref={ref}>
       <h1 className="main-title">Project</h1>
-
       <div className="project-card-wrapper">
         <div className="slide">
           <img
