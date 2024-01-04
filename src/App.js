@@ -40,9 +40,6 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition =
-        window.scrollY || document.documentElement.scrollTop;
-
       const sections = [
         { ref: HomeRef, id: "home" },
         { ref: ArchivingRef, id: "archiving" },
