@@ -4,3 +4,9 @@
 .arc-card {
   width: 50%;
 }
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .arc-card {
+    width: 60vw;
+  }
+}

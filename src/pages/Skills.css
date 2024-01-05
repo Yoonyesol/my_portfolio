@@ -2,6 +2,12 @@
   /* background: linear-gradient(#ebe996, #ebf9ac); */
 }
 
+.skill-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .skill-img-wrapper > img {
   width: 250px;
   height: auto;
@@ -14,4 +20,14 @@
 .skill-title {
   margin: 0 0 30px 0;
   color: rgb(83, 83, 88);
+}
+
+@media screen and (min-width: 280px) and (max-width: 600px) {
+  .skill-img-wrapper > img {
+    width: 50vw;
+  }
+
+  .skill-card {
+    width: 60vw;
+  }
 }

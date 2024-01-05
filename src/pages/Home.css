@@ -16,23 +16,29 @@
 }
 
 .title > h1 {
-  font-size: calc(25px + 5vw);
-  letter-spacing: 0.02em;
-  text-shadow: 0 0 0.15em #1da9cc;
-
-  filter: blur(0.007em);
+  font-size: calc(20px + 5vw);
+  letter-spacing: 0.05em;
 
   animation: fadein 4s;
   animation-iteration-count: 1;
 }
 
 .title > h2 {
-  font-size: 20px;
+  font-size: calc(10px + 0.5vw);
   color: #f7d238;
-  letter-spacing: 15px;
+  letter-spacing: calc(10px + 0.5vw);
 
   animation: fadein 6s;
   animation-iteration-count: 1;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes card-animation {
@@ -48,7 +54,7 @@
 
 .description {
   margin-top: 30px;
-  font-size: 20px;
+  font-size: calc(13px + 0.4vw);
 }
 
 .description > p {
@@ -70,14 +76,13 @@
 
 .scroll {
   height: 50px;
-  margin: 50px;
+  margin-top: 100px;
 }
 
 .scroll > img {
   cursor: pointer;
 
-  width: 20px;
-  height: auto;
+  width: calc(10px + 0.5vw);
 
   animation-name: moving-arrow;
   animation-duration: 0.8s;

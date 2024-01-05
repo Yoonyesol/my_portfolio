@@ -121,6 +121,7 @@ function App() {
       >
         <Contact />
       </div>
+      <footer>(C) 2023. 윤예솔. All rights reserved.</footer>
     </div>
   );
 }

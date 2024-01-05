@@ -19,3 +19,15 @@
 .cert-item {
   margin-bottom: 30px;
 }
+
+@media screen and (min-width: 280px) and (max-width: 420px) {
+  .edu-card > img,
+  .cert-item > img {
+    width: 50%;
+  }
+
+  .edu-card,
+  .cert-card {
+    width: 60vw;
+  }
+}

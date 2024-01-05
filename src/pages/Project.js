@@ -38,10 +38,12 @@ const Project = forwardRef((props, ref) => {
           <h4>개인 프로젝트</h4>
           <section>
             <article className="info-article">
-              <img
-                src={projectItems[currentProjectIndex].imageUrl}
-                alt={projectItems[currentProjectIndex].title}
-              />
+              <div className="project-img">
+                <img
+                  src={projectItems[currentProjectIndex].imageUrl}
+                  alt={projectItems[currentProjectIndex].title}
+                />
+              </div>
               <p className="link-wrapper">Github</p>
               <a href={projectItems[currentProjectIndex].githubLink}>
                 {projectItems[currentProjectIndex].title}
