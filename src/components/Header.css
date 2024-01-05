@@ -77,10 +77,6 @@
     text-align: center;
   }
 
-  .header-title {
-    font-size: 25px;
-  }
-
   .menu-list {
     display: none;
     flex-direction: column;

@@ -28,12 +28,16 @@
 .project-card {
   width: 800px;
   height: 750px;
-  margin-top: 40px;
   overflow-y: scroll;
 }
 
 .project-card::-webkit-scrollbar {
   width: 0px;
+}
+
+.project-content-wrapper {
+  overflow-y: scroll;
+  height: calc(100% - 30px); /* 750px - 30px */
 }
 
 .project-title {
@@ -86,7 +90,7 @@ article {
 
   .project-card {
     padding: 5vw 5vw;
-    height: 100vh;
+    height: 70vh;
     word-break: break-all;
   }
 

@@ -1,7 +1,5 @@
 import React, { forwardRef } from "react";
-
 import "./Home.css";
-import { imageUrl } from "../utils/commonUtil";
 
 const Home = forwardRef((props, ref) => {
   return (
@@ -20,7 +18,7 @@ const Home = forwardRef((props, ref) => {
       </div>
       <div className="scroll">
         <img
-          src={imageUrl + "assets/images/down.png"}
+          src={process.env.PUBLIC_URL + "/assets/images/down.png"}
           onClick={props.moveToArc}
         />
       </div>

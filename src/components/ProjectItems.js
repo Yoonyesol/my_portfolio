@@ -1,10 +1,8 @@
-import { imageUrl } from "../utils/commonUtil";
-
 export const projectItems = [
   {
     title: "🌓Dream note",
     category: "개인 프로젝트",
-    imageUrl: `${imageUrl}assets/images/dn1.png`,
+    imageUrl: `${process.env.PUBLIC_URL}/assets/images/dn1.png`,
     githubLink: "https://github.com/Yoonyesol/Dream_note",
     deployLink: "https://dreamnote-9f9f2.web.app",
     blogLink: "https://tinyurl.com/ylvw7xjd",
@@ -19,7 +17,7 @@ export const projectItems = [
   {
     title: "⏰Stop Watch",
     category: "개인 프로젝트",
-    imageUrl: `${imageUrl}assets/images/stopwatch1.png`,
+    imageUrl: `${process.env.PUBLIC_URL}/assets/images/stopwatch1.png`,
     githubLink: "https://github.com/Yoonyesol/Clock-Web",
     deployLink: "https://glittering-belekoy-da2ec9.netlify.app/",
     description:
@@ -33,7 +31,7 @@ export const projectItems = [
   {
     title: "🎡Portfolio",
     category: "개인 프로젝트",
-    imageUrl: `${imageUrl}assets/images/portfolio1.png`,
+    imageUrl: `${process.env.PUBLIC_URL}/assets/images/portfolio_main.gif`,
     githubLink: "https://github.com/Yoonyesol/my_portfolio",
     deployLink: "https://yoonyesol.github.io/my_portfolio/",
     blogLink: "https://tinyurl.com/yu9yg6hc",
@@ -46,7 +44,7 @@ export const projectItems = [
   {
     title: "‍👨‍👧‍👧Social Account Book",
     category: "개인 프로젝트 (진행중)",
-    imageUrl: `${imageUrl}assets/images/social1.png`,
+    imageUrl: `${process.env.PUBLIC_URL}/assets/images/social1.png`,
     githubLink: "https://github.com/Yoonyesol/Web-Social-Account-Book",
     blogLink: "https://tinyurl.com/yke3b74w",
     description:
