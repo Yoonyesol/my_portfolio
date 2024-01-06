@@ -20,22 +20,22 @@ function App() {
   const [selectedPage, setSelectedPage] = useState("");
 
   const moveToHomeHandler = () => {
-    HomeRef.current.scrollIntoView({ behavior: "smooth" });
+    HomeRef.current.scrollIntoView({ behavior: "auto" });
   };
   const moveToArcHandler = () => {
-    ArchivingRef.current.scrollIntoView({ behavior: "smooth" });
+    ArchivingRef.current.scrollIntoView({ behavior: "auto" });
   };
   const moveToSkillsHandler = () => {
-    SkillsRef.current.scrollIntoView({ behavior: "smooth" });
+    SkillsRef.current.scrollIntoView({ behavior: "auto" });
   };
   const moveToProjectHandler = () => {
-    ProjectRef.current.scrollIntoView({ behavior: "smooth" });
+    ProjectRef.current.scrollIntoView({ behavior: "auto" });
   };
   const moveToEduHandler = () => {
-    EduRef.current.scrollIntoView({ behavior: "smooth" });
+    EduRef.current.scrollIntoView({ behavior: "auto" });
   };
   const moveToContactHandler = () => {
-    ContactRef.current.scrollIntoView({ behavior: "smooth" });
+    ContactRef.current.scrollIntoView({ behavior: "auto" });
   };
 
   useEffect(() => {
