@@ -1,8 +1,16 @@
+const url = `${process.env.PUBLIC_URL}/assets/images/`;
+
 export const projectItems = [
   {
     title: "🌓Dream note",
     category: "개인 프로젝트",
-    imageUrl: `${process.env.PUBLIC_URL}/assets/images/dn1.png`,
+    imageUrl: [
+      `${url}dreamnote11.gif`,
+      `${url}dreamnote1.png`,
+      `${url}dreamnote2.png`,
+      `${url}dreamnote3.png`,
+      `${url}dreamnote4.png`,
+    ],
     githubLink: "https://github.com/Yoonyesol/Dream_note",
     deployLink: "https://dreamnote-9f9f2.web.app",
     blogLink: "https://tinyurl.com/ylvw7xjd",
@@ -17,7 +25,11 @@ export const projectItems = [
   {
     title: "⏰Stop Watch",
     category: "개인 프로젝트",
-    imageUrl: `${process.env.PUBLIC_URL}/assets/images/stopwatch1.png`,
+    imageUrl: [
+      `${url}stopwatch2.gif`,
+      `${url}stopwatch4.png`,
+      `${url}stopwatch3.png`,
+    ],
     githubLink: "https://github.com/Yoonyesol/Clock-Web",
     deployLink: "https://glittering-belekoy-da2ec9.netlify.app/",
     description:
@@ -31,7 +43,14 @@ export const projectItems = [
   {
     title: "🎡Portfolio",
     category: "개인 프로젝트",
-    imageUrl: `${process.env.PUBLIC_URL}/assets/images/portfolio_main.gif`,
+    imageUrl: [
+      `${url}portfolio1.gif`,
+      `${url}portfolio2.png`,
+      `${url}portfolio3.png`,
+      `${url}portfolio4.png`,
+      `${url}portfolio5.png`,
+      `${url}portfolio6.png`,
+    ],
     githubLink: "https://github.com/Yoonyesol/my_portfolio",
     deployLink: "https://yoonyesol.github.io/my_portfolio/",
     blogLink: "https://tinyurl.com/yu9yg6hc",
@@ -44,7 +63,13 @@ export const projectItems = [
   {
     title: "‍👨‍👧‍👧Social Account Book",
     category: "개인 프로젝트 (진행중)",
-    imageUrl: `${process.env.PUBLIC_URL}/assets/images/social1.png`,
+    imageUrl: [
+      `${url}accountbook1.gif`,
+      `${url}accountbook2.gif`,
+      `${url}accountbook3.gif`,
+      `${url}accountbook4.png`,
+      `${url}accountbook5.png`,
+    ],
     githubLink: "https://github.com/Yoonyesol/Web-Social-Account-Book",
     blogLink: "https://tinyurl.com/yke3b74w",
     description:

@@ -3,18 +3,46 @@ import Card from "../components/Card";
 import "./Project.css";
 import { projectItems } from "../components/ProjectItems";
 
-const Project = forwardRef((props, ref) => {
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
+const projectImage = [
+  { project1: [0, 1, 2, 3, 4] },
+  { project2: [0, 1, 2] },
+  { project3: [0, 1, 2, 3, 4, 5] },
+  { project4: [0, 1, 2, 3, 4] },
+];
 
-  const handlePrevProject = () => {
-    setCurrentProjectIndex((prevIndex) =>
-      prevIndex === 0 ? projectItems.length - 1 : prevIndex - 1
+const Project = forwardRef((props, ref) => {
+  const [imgIndexes, setImgIndexes] = useState(
+    projectImage.map((project) => 0)
+  );
+
+  const handlePrevProject = (index) => {
+    setImgIndexes((prevIndexes) =>
+      prevIndexes.map((prevIndex, i) => {
+        if (i === index && prevIndex === 0) {
+          return projectImage[i][`project${i + 1}`].length - 1;
+        } else if (i === index) {
+          return prevIndex - 1;
+        }
+        return prevIndex;
+      })
     );
   };
 
-  const handleNextProject = () => {
-    setCurrentProjectIndex((prevIndex) =>
-      prevIndex === projectItems.length - 1 ? 0 : prevIndex + 1
+  const handleNextProject = (index) => {
+    setImgIndexes((prevIndexes) =>
+      prevIndexes.map((prevIndex, i) =>
+        i === index
+          ? prevIndex === projectImage[i][`project${i + 1}`].length - 1
+            ? 0
+            : prevIndex + 1
+          : prevIndex
+      )
+    );
+  };
+
+  const handleDotClick = (index, dotIndex) => {
+    setImgIndexes((prevIndexes) =>
+      prevIndexes.map((prevIndex, i) => (i === index ? dotIndex : prevIndex))
     );
   };
 
@@ -22,59 +50,72 @@ const Project = forwardRef((props, ref) => {
     <div className="container project" ref={ref}>
       <h1 className="main-title">Project</h1>
       <div className="project-card-wrapper">
-        <div className="slide">
-          <img
-            src={process.env.PUBLIC_URL + "/assets/images/left01.png"}
-            onClick={handlePrevProject}
-          />
-        </div>
-        <Card className="project-card">
-          <div className="project-order">
-            {currentProjectIndex + 1} / {projectItems.length}
-          </div>
-          <h2 className="project-title">
-            {projectItems[currentProjectIndex].title}
-          </h2>
-          <h4>개인 프로젝트</h4>
-          <section>
-            <article className="info-article">
-              <div className="project-img">
-                <img
-                  src={projectItems[currentProjectIndex].imageUrl}
-                  alt={projectItems[currentProjectIndex].title}
-                />
+        {projectItems.map((project, index) => {
+          return (
+            <Card className="project-card" key={index}>
+              <h2 className="project-title">{project.title}</h2>
+              <h4>{project.category}</h4>
+              <div className="project-slider">
+                <div
+                  className="arrow left"
+                  onClick={() => handlePrevProject(index)}
+                ></div>
+                <div className="img-container">
+                  <img
+                    src={
+                      project.imageUrl[
+                        projectImage[index][`project${index + 1}`][
+                          imgIndexes[index]
+                        ]
+                      ]
+                    }
+                    alt={project.title}
+                  />
+                </div>
+                <div
+                  className="arrow right"
+                  onClick={() => handleNextProject(index)}
+                ></div>
               </div>
-              <p className="link-wrapper">Github</p>
-              <a href={projectItems[currentProjectIndex].githubLink}>
-                {projectItems[currentProjectIndex].title}
-              </a>
-              <p className="link-wrapper">배포 링크</p>
-              <a href={projectItems[currentProjectIndex].deployLink}>
-                {projectItems[currentProjectIndex].deployLink}
-              </a>
-              <p className="link-wrapper">개발 기록</p>
-              <a href={projectItems[currentProjectIndex].blogLink}>
-                {projectItems[currentProjectIndex].blogLink}
-              </a>
-            </article>
-            <article>
-              <h3>프로젝트 소개</h3>
-              <p>{projectItems[currentProjectIndex].description}</p>
-              <h3>주요 기능</h3>
-              <p>{projectItems[currentProjectIndex].features}</p>
-              <h3>회고</h3>
-              <p>{projectItems[currentProjectIndex].retrospective}</p>
-              <h3>기술스택</h3>
-              <p>{projectItems[currentProjectIndex].techStack}</p>
-            </article>
-          </section>
-        </Card>
-        <div className="slide">
-          <img
-            src={process.env.PUBLIC_URL + "/assets/images/right01.png"}
-            onClick={handleNextProject}
-          />
-        </div>
+              <div className="dot-container">
+                {projectImage[index][`project${index + 1}`].map(
+                  (item, dotIndex) => (
+                    <span
+                      key={dotIndex}
+                      className={`dot ${
+                        dotIndex === imgIndexes[index] ? "active" : ""
+                      }`}
+                      onClick={() => handleDotClick(index, dotIndex)}
+                    ></span>
+                  )
+                )}
+              </div>
+              <section>
+                <article className="info-article">
+                  <p className="link-wrapper">Github</p>
+                  <a href={project.githubLink}>{project.title}</a>
+                  <p className="link-wrapper">배포 링크</p>
+                  <a href={project.deployLink}>{project.deployLink}</a>
+                  <p className="link-wrapper">개발 기록</p>
+                  <a href={project.blogLink}>{project.blogLink}</a>
+                </article>
+                <article className="detail-article">
+                  <h3>프로젝트 소개</h3>
+                  <p>{project.description}</p>
+                  <h3>주요 기능</h3>
+                  <p>{project.features}</p>
+                  <h3>기술스택</h3>
+                  <p>{project.techStack}</p>
+                  <h3>회고</h3>
+                  <p>{project.retrospective}</p>
+                </article>
+              </section>
+              <div className="project-order">
+                {index + 1} / {projectItems.length}
+              </div>
+            </Card>
+          );
+        })}
       </div>
     </div>
   );
