@@ -1,8 +1,8 @@
 import { forwardRef } from "react";
 import Card from "../components/Card";
-import "./Edu.css";
+import "./Qualification.css";
 
-const Edu = forwardRef((props, ref) => {
+const Qualification = forwardRef((props, ref) => {
   return (
     <div className="container edu" ref={ref}>
       <h1 className="main-title">Qualification</h1>
@@ -33,4 +33,4 @@ const Edu = forwardRef((props, ref) => {
   );
 });
 
-export default Edu;
+export default Qualification;

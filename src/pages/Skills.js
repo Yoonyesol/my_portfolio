@@ -5,7 +5,7 @@ import "./Skills.css";
 const Skills = forwardRef((props, ref) => {
   return (
     <div className="container skills" ref={ref}>
-      <h1 className="main-title">Tech Skills</h1>
+      <h1 className="main-title">Skills</h1>
       <div className="card-wrapper">
         <div>
           <Card className="skill-card">

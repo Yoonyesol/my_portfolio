@@ -4,7 +4,7 @@ import Skills from "./pages/Skills";
 
 import "./App.css";
 import Project from "./pages/Project";
-import Edu from "./pages/Edu";
+import Qualification from "./pages/Qualification";
 import Contact from "./pages/Contact";
 import Header from "./components/Header";
 import { useEffect, useRef, useState } from "react";
@@ -14,7 +14,7 @@ function App() {
   const ArchivingRef = useRef(null);
   const SkillsRef = useRef(null);
   const ProjectRef = useRef(null);
-  const EduRef = useRef(null);
+  const QualificationRef = useRef(null);
   const ContactRef = useRef(null);
   const [visibleSections, setVisibleSections] = useState([]);
   const [selectedPage, setSelectedPage] = useState("");
@@ -31,8 +31,8 @@ function App() {
   const moveToProjectHandler = () => {
     ProjectRef.current.scrollIntoView({ behavior: "auto" });
   };
-  const moveToEduHandler = () => {
-    EduRef.current.scrollIntoView({ behavior: "auto" });
+  const moveToQualificationHandler = () => {
+    QualificationRef.current.scrollIntoView({ behavior: "auto" });
   };
   const moveToContactHandler = () => {
     ContactRef.current.scrollIntoView({ behavior: "auto" });
@@ -45,7 +45,7 @@ function App() {
         { ref: ArchivingRef, id: "archiving" },
         { ref: SkillsRef, id: "skills" },
         { ref: ProjectRef, id: "project" },
-        { ref: EduRef, id: "edu" },
+        { ref: QualificationRef, id: "qualification" },
         { ref: ContactRef, id: "contact" },
       ];
 
@@ -80,7 +80,7 @@ function App() {
         moveToArc={moveToArcHandler}
         moveToSkill={moveToSkillsHandler}
         moveToPrj={moveToProjectHandler}
-        moveToEdu={moveToEduHandler}
+        moveToEdu={moveToQualificationHandler}
         moveToContact={moveToContactHandler}
         selectedPage={selectedPage}
       />
@@ -108,10 +108,10 @@ function App() {
         <Project />
       </div>
       <div
-        ref={EduRef}
+        ref={QualificationRef}
         className={`section ${visibleSections.includes("edu") && "visible"}`}
       >
-        <Edu />
+        <Qualification />
       </div>
       <div
         ref={ContactRef}
