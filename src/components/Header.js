@@ -34,7 +34,7 @@ const Header = ({
       <div className="header-contents">
         <div className="title-toggle">
           <span className="header-title" onClick={moveToHome}>
-            Portfolio
+            YESOL
           </span>
           <div className="toggle-button">
             <img
