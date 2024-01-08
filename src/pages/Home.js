@@ -7,7 +7,7 @@ const Home = forwardRef((props, ref) => {
   useEffect(() => {
     const typeNextText = () => {
       const currentText = "YOON YESOL";
-      const delay = 100; // 글자 나타나는 간격(ms)
+      const delay = 150; // 글자 나타나는 간격(ms)
 
       for (let i = 0; i <= currentText.length; i++) {
         setTimeout(() => {

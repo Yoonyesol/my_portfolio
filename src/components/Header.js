@@ -6,7 +6,7 @@ const Header = ({
   moveToArc,
   moveToSkill,
   moveToPrj,
-  moveToEdu,
+  moveToQualification,
   moveToContact,
   selectedPage,
 }) => {
@@ -60,8 +60,12 @@ const Header = ({
           >
             <div onClick={moveToPrj}>PROJECT</div>
           </li>
-          <li className={`menu-item ${selectedPage === "edu" && "visible"}`}>
-            <div onClick={moveToEdu}>QUALIFICATION</div>
+          <li
+            className={`menu-item ${
+              selectedPage === "qualification" && "visible"
+            }`}
+          >
+            <div onClick={moveToQualification}>QUALIFICATION</div>
           </li>
           <li
             className={`menu-item ${selectedPage === "contact" && "visible"}`}

@@ -80,7 +80,7 @@ function App() {
         moveToArc={moveToArcHandler}
         moveToSkill={moveToSkillsHandler}
         moveToPrj={moveToProjectHandler}
-        moveToEdu={moveToQualificationHandler}
+        moveToQualification={moveToQualificationHandler}
         moveToContact={moveToContactHandler}
         selectedPage={selectedPage}
       />
@@ -109,7 +109,9 @@ function App() {
       </div>
       <div
         ref={QualificationRef}
-        className={`section ${visibleSections.includes("edu") && "visible"}`}
+        className={`section ${
+          visibleSections.includes("qualification") && "visible"
+        }`}
       >
         <Qualification />
       </div>
