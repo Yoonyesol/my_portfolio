@@ -18,8 +18,6 @@
 .title > h1 {
   font-size: calc(20px + 5vw);
   letter-spacing: 0.05em;
-
-  animation: fadeInUp 4s;
   animation-iteration-count: 1;
 }
 
@@ -28,7 +26,13 @@
     opacity: 0;
     transform: translate3d(0, 100%, 0);
   }
-  to {
+  30% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
     opacity: 1;
     transform: translateZ(0);
   }
@@ -38,27 +42,21 @@
   font-size: calc(10px + 0.5vw);
   color: #f7d238;
   letter-spacing: calc(10px + 0.5vw);
-
-  animation: fadein 7s;
+  animation: fadeInUp 4s;
   animation-iteration-count: 1;
 }
 
 @keyframes fadein {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  30% {
+    opacity: 0;
+  }
+  50% {
     opacity: 1;
   }
-}
-
-@keyframes card-animation {
-  from {
-    transform: scale(0.8);
-    opacity: 0.5;
-  }
-  to {
-    transform: scale(1);
+  100% {
     opacity: 1;
   }
 }
@@ -70,7 +68,6 @@
 
 .description > p {
   margin-bottom: 0;
-
   animation: fadein 7s;
   animation-iteration-count: 1;
   color: rgba(229, 229, 240, 0.808);
@@ -92,9 +89,7 @@
 
 .scroll > img {
   cursor: pointer;
-
   width: calc(10px + 0.5vw);
-
   animation: moving-arrow 1s;
   animation-delay: 4s;
   animation-iteration-count: infinite;

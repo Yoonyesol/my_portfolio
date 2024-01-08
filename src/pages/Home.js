@@ -1,14 +1,29 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useState, useEffect } from "react";
 import "./Home.css";
 
 const Home = forwardRef((props, ref) => {
+  const [typedText, setTypedText] = useState("");
+
+  useEffect(() => {
+    const typeNextText = () => {
+      const currentText = "YOON YESOL";
+      const delay = 100; // 글자 나타나는 간격(ms)
+
+      for (let i = 0; i <= currentText.length; i++) {
+        setTimeout(() => {
+          setTypedText(currentText.substring(0, i));
+        }, i * delay);
+      }
+    };
+
+    typeNextText();
+  }, []);
+
   return (
     <div className="home" ref={ref}>
       <div className="container home-container">
         <div className="title">
-          <h1>
-            <span>YOON YESOL</span>
-          </h1>
+          <h1>{typedText && <span>{typedText}</span>}</h1>
           <h2>FRONT-END DEV.</h2>
         </div>
         <div className="description">
