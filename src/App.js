@@ -121,7 +121,10 @@ function App() {
       >
         <Contact />
       </div>
-      <footer>(C) 2023. 윤예솔. All rights reserved.</footer>
+      <footer>
+        <p className="icon">Icon by Icons8</p>
+        <p>(C) 2023. 윤예솔. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

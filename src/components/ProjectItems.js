@@ -15,7 +15,7 @@ export const projectItems = [
     deployLink: "https://dreamnote-9f9f2.web.app",
     blogLink: "https://tinyurl.com/ylvw7xjd",
     description:
-      "꿈 속에서 겪었던 즐겁거나 흥미로운 일들이 금방 휘발되는 것이 아까워 잊기 전에 기록하기 위해 개발한 어플리케이션입니다.",
+      "꿈 속에서 겪었던 즐겁거나 흥미로운 일들을 기록하기 위해 개발한 어플리케이션입니다.",
     features:
       "꿈 일기 기록/조회/수정/삭제(CRUD)기능, 일기 장르 태그 지정 기능, 일기 제목/본문 검색 기능, 이미지 업로드 기능, LocalStorage를 이용해 일기를 로컬에 저장하기, 모바일-데스크탑 호환 가능한 반응형 웹",
     retrospective:
@@ -54,10 +54,11 @@ export const projectItems = [
     githubLink: "https://github.com/Yoonyesol/my_portfolio",
     deployLink: "https://yoonyesol.github.io/my_portfolio/",
     blogLink: "https://tinyurl.com/yu9yg6hc",
-    description: "취업을 위해 개발한 포트폴리오 웹입니다.",
-    features: "자기소개, 저장소 및 프로젝트 소개, 이메일 전송 기능",
+    description: "개인 포트폴리오 웹 사이트입니다.",
+    features:
+      "자기소개, 저장소, 테크스택 및 프로젝트 소개, 자격, 이메일 전송 기능",
     retrospective:
-      "css 사용에 익숙해졌고 Emailjs를 이용해 서버 구축 없이 이메일을 보내는 기능도 구현해 보았습니다.",
+      "css 및 animation 사용에 익숙해질 수 있는 프로젝트였습니다. Emailjs를 이용해 별도의 서버 구축 없이 이메일을 보내는 기능도 구현해 볼 수 있었습니다.",
     techStack: "JavaScript, React, Html, Css, Emailjs",
   },
   {

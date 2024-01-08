@@ -19,8 +19,19 @@
   font-size: calc(20px + 5vw);
   letter-spacing: 0.05em;
 
-  animation: fadein 4s;
+  animation: fadeInUp 4s;
   animation-iteration-count: 1;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
 }
 
 .title > h2 {
@@ -28,7 +39,7 @@
   color: #f7d238;
   letter-spacing: calc(10px + 0.5vw);
 
-  animation: fadein 6s;
+  animation: fadein 7s;
   animation-iteration-count: 1;
 }
 
@@ -84,8 +95,8 @@
 
   width: calc(10px + 0.5vw);
 
-  animation-name: moving-arrow;
-  animation-duration: 0.8s;
+  animation: moving-arrow 1s;
+  animation-delay: 4s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
