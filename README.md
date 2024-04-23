@@ -57,6 +57,7 @@ https://dreamnote-9f9f2.web.app
 - 프로젝트 디자인에 대해 많은 고민을 할 수 있었습니다.
 - 화면을 꾸미기 위하여 다양한 CSS 및 Animation 요소를 사용해 볼 수 있었습니다.
 - useRef Hook과 `Ref.current.scrollIntoView({ behavior: "auto" })`를 이용해 특정 컴포넌트로 이동하는 기능을 구현했습니다.
+- `getBoundingClientRect()`를 이용해 요소의 위치값을 구하고 이를 기반으로 스크롤 애니메이션을 구현했습니다.
 - Emailjs를 이용해 별도의 서버 구축 없이 이메일을 전송하는 기능을 익혔습니다.
 
 <br/>
