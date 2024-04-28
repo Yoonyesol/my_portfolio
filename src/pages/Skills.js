@@ -15,6 +15,7 @@ const Skills = forwardRef((props, ref) => {
                 src={process.env.PUBLIC_URL + "/assets/images/htmlcssjs.png"}
               />
               <img src={process.env.PUBLIC_URL + "/assets/images/react.png"} />
+              <img src={process.env.PUBLIC_URL + "/assets/images/redux.png"} />
               <img
                 src={process.env.PUBLIC_URL + "/assets/images/styled.png"}
                 style={{ width: "120px" }}
@@ -25,7 +26,9 @@ const Skills = forwardRef((props, ref) => {
             <h2 className="skill-title">Backend</h2>
             <div className="skill-img-wrapper">
               <img src={process.env.PUBLIC_URL + "/assets/images/node.png"} />
-              <img src={process.env.PUBLIC_URL + "/assets/images/mysql.png"} />
+              <img
+                src={process.env.PUBLIC_URL + "/assets/images/MongoDB.png"}
+              />
             </div>
           </Card>
         </div>
@@ -39,7 +42,7 @@ const Skills = forwardRef((props, ref) => {
               <img
                 src={process.env.PUBLIC_URL + "/assets/images/netlify.png"}
               />
-              <img src={process.env.PUBLIC_URL + "/assets/images/heroku.png"} />
+              <img src={process.env.PUBLIC_URL + "/assets/images/vercel.png"} />
             </div>
           </Card>
           <Card className="skill-card">

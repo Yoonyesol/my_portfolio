@@ -92,6 +92,8 @@ const Project = forwardRef((props, ref) => {
               </div>
               <section>
                 <article className="info-article">
+                  <p className="link-wrapper">기술스택</p>
+                  <p>{project.techStack}</p>
                   <p className="link-wrapper">Github</p>
                   <a href={project.githubLink}>{project.title}</a>
                   <p className="link-wrapper">배포 링크</p>
@@ -103,11 +105,17 @@ const Project = forwardRef((props, ref) => {
                   <h3>프로젝트 소개</h3>
                   <p>{project.description}</p>
                   <h3>주요 기능</h3>
-                  <p>{project.features}</p>
-                  <h3>기술스택</h3>
-                  <p>{project.techStack}</p>
-                  <h3>회고</h3>
-                  <p>{project.retrospective}</p>
+                  <p>
+                    {project.features.map((it) => (
+                      <li>{it}</li>
+                    ))}
+                  </p>
+                  <h3>회고 및 배운 점</h3>
+                  <p>
+                    {project.retrospective.map((it) => (
+                      <li>{it}</li>
+                    ))}
+                  </p>
                 </article>
               </section>
               <div className="project-order">

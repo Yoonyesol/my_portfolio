@@ -106,6 +106,10 @@ article {
   text-align: left;
 }
 
+.info-article {
+  width: 40%;
+}
+
 .link-wrapper {
   background-color: #f2dd68;
   padding: 0 10px;
@@ -142,10 +146,11 @@ article {
   }
 
   article {
-    text-align: center;
+    /* text-align: center; */
   }
 
   .info-article {
+    width: auto;
     margin-bottom: 35px;
   }
 
